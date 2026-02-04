@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PlayerSingleton
+namespace BaseVersion
 {
     class Program
     {
@@ -10,10 +10,17 @@ namespace PlayerSingleton
             Player player = Player.Instance; // Получаем экземпляр класса Player
 
             // Инициализируем игрока
+            // health
             player.Health = 100;
             player.Lives = 3;
+
+            // name
             player.Nickname = "John";
+
+            // skils
             player.Skills = new string[] { "Skill1", "Skill2", "Skill3" };
+
+            //equipment
             player.Equipment = new Equipment();
 
             Console.WriteLine("Здоровье игрока: " + player.Health);
